@@ -1,0 +1,13 @@
+package com.abdul.eureca;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EurecaNamingServerApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

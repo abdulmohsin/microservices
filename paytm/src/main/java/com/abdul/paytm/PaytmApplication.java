@@ -11,6 +11,7 @@ public class PaytmApplication {
 
 	@GetMapping("/")
 	public String paytmHello() {
+		System.out.println("********* Hello Caller from paytm");
 		return "Hello Abdul from Paytm";
 	}
 	public static void main(String[] args) {

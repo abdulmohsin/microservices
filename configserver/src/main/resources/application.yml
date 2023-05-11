@@ -1,0 +1,32 @@
+
+server:
+  port: 8888
+#spring.application.name=AbdulConfigServer
+spring:
+  application:
+    name: AbdulConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://E:/Abdul/Microservices/config-files
+#spring.cloud.config.server.native.searchLocations=file://E:/Abdul/Microservices/config-files
+#eureka.client.serviceUrl.defaultZone=http://localhost:5656/eureka/
+#spring.profiles.active=native
+
+
+management:
+  endpoints:
+    web:
+     exposure:
+       include: "*"
+
+eureka:
+  instance:
+    metadata-map:
+      metrics.path: /actuator/prometheus
+      health.path: /actuator/health
+      management.context-path: /actuator
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URI:http://localhost:5656/eureka/}    

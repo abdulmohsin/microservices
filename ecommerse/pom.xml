@@ -9,7 +9,6 @@
 	</parent>
 	<groupId>com.abdul.ecommerce</groupId>
 	<artifactId>ecommerse</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>ecommerce</name>
 	<description>Ecommerce</description>
 	<properties>
@@ -45,24 +44,21 @@
 			<artifactId>micrometer-registry-dynatrace</artifactId>
 		</dependency>	
 		
-		<!--<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing</artifactId>
-		</dependency>
-
-
 		<dependency>
 			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing-bridge-brave</artifactId>
+			<artifactId>micrometer-tracing-bridge-otel</artifactId>
 		</dependency>
-
-
+		
 		<dependency>
-			<groupId>io.zipkin.reporter2</groupId>
-			<artifactId>zipkin-reporter-brave</artifactId>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-exporter-zipkin</artifactId>
 		</dependency>
-
--->
+		
+		<dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-micrometer</artifactId>
+        </dependency>
+		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>

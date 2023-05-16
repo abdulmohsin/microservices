@@ -7,9 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.abdul.eureca</groupId>
 	<artifactId>EurecaNamingServer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>EurecaNamingServer</name>
 	<description>EurecaNamingServer</description>
 	<properties>
@@ -43,8 +41,17 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-dynatrace</artifactId>
-		</dependency>			
-
+		</dependency>	
+		
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-otel</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-exporter-zipkin</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>

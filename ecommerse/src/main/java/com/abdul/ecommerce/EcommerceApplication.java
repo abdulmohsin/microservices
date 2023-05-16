@@ -1,12 +1,11 @@
 package com.abdul.ecommerce;
 
-import java.util.function.Supplier;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import reactor.core.publisher.Hooks;
 
 @SpringBootApplication
 @EnableScheduling
@@ -14,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class EcommerceApplication {
 
 	public static void main(String[] args) {
+		//Hooks.enableAutomaticContextPropagation();
 		SpringApplication.run(EcommerceApplication.class, args);
 	}
 

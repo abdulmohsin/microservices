@@ -18,23 +18,23 @@ public class PaytmCaller {
 
 	@Autowired
 	private EurekaClient eurekaClient;
-	
+
 	@Value("${source}")
 	private String source;
-	
+
 	private static final Log logger = LogFactory.getLog(PaytmCaller.class);
-	
 
 	private static final String APP_NAME = "paytm";
 
-	public void callPaytmSync() {
+	public String callPaytmSync() {
 		eurekaClient.getApplication(APP_NAME).getInstances().stream()
-				.forEach(x -> logger.info("#########\n" + x.getId()
-						+ "\n******** Paytm Instance : \n pageURL" + x.getHomePageUrl() + "\n \n healthcheckURL: "
-						+ x.getHealthCheckUrl() + " \n\n status : " + x.getStatus()
-						+ "\n##########"));
-		logger.info("***** Source : "+ source);
-		logger.info("********** Output from Paytm : " + paytmClient.getPaytmOutput());
+				.forEach(x -> logger.info("#########\n" + x.getId() + "\n******** Paytm Instance : \n pageURL"
+						+ x.getHomePageUrl() + "\n \n healthcheckURL: " + x.getHealthCheckUrl() + " \n\n status : "
+						+ x.getStatus() + "\n##########"));
+		logger.info("***** Source : " + source);
+		String output = paytmClient.getPaytmHelloOutput();
+		logger.info("********** Output from Paytm : " + output);
+		return output;
 	}
 
 }

@@ -43,6 +43,7 @@
 		<module>ecommerse</module>
 		<module>EurecaNamingServer</module>
 		<module>paytm</module>
+		<module>gateway</module>
 	</modules>
 	<build>
 		<plugins>

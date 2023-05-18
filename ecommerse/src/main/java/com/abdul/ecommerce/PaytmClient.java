@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FeignClient("paytm")
 public interface PaytmClient {
 
-	@RequestMapping("/")
-    String getPaytmOutput();
+	@RequestMapping("/paytm/hello")
+    String getPaytmHelloOutput();
+	
+	@RequestMapping("/paytm/goodBye")
+    String getPaytmGoodByeOutput();
 }

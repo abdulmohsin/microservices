@@ -1,0 +1,17 @@
+management:
+ endpoints:
+   web:
+    exposure:
+     include: "*"
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: PAYTM
+        uri: lb://PAYTM:5656
+        predicates:
+        - Path=/paytm/**
+      - id: eCom
+        uri: lb://ECOMMERCE:5656
+        predicates:
+        - Path=/ecom/**

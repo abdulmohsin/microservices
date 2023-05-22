@@ -15,7 +15,7 @@ public class EcommerceScheduledJob {
 	@Autowired
 	private EcommerceService eCommerceService;
 	
-	@Scheduled(fixedRate = 60000)
+	@Scheduled(fixedRate = 120000)
 	public void performScheduledOperation() {
 		eCommerceService.beginTransaction();
 	}

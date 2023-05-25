@@ -1,0 +1,5 @@
+
+
+E:\Abdul\Microservices\ELK\elasticsearch-8.7.1-windows-x86_64\elasticsearch-8.7.1\bin>elasticsearch-users useradd -r superuser abdul
+
+pass set as : mohsin

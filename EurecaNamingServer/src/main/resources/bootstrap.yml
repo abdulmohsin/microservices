@@ -12,3 +12,5 @@ eureka:
       defaultZone: ${EUREKA_SERVICE_URI:http://localhost:5656/eureka/}
 server:
   port: 5656
+logging:
+  config: http://localhost:8888/config/spring/main/logback-spring.xml

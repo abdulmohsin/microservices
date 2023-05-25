@@ -9,7 +9,6 @@
 	</parent>
 	<groupId>com.abdul.dbservice</groupId>
 	<artifactId>dbservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>dbservice</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
